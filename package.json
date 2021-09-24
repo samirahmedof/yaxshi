@@ -1,0 +1,27 @@
+{
+  "name": "scli",
+  "version": "1.0.0",
+  "description": "custom cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samirahmedof/scli.git"
+  },
+  "keywords": [
+    "custom",
+    "cli"
+  ],
+  "author": "Samir Ahmadov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samirahmedof/scli/issues"
+  },
+  "homepage": "https://github.com/samirahmedof/scli#readme",
+  "dependencies": {
+    "commander": "^8.2.0",
+    "inquirer": "^8.1.5"
+  }
+}
