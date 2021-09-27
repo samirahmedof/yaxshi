@@ -1,8 +1,10 @@
 {
-  "name": "scli",
+  "name": "@samir/yaxsi",
   "version": "1.0.0",
   "description": "custom cli",
-  "main": "index.js",
+  "main": "commands.js",
+  "preferGlobal": true,
+  "bin": "./commands.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +24,7 @@
   "homepage": "https://github.com/samirahmedof/scli#readme",
   "dependencies": {
     "commander": "^8.2.0",
-    "inquirer": "^8.1.5"
+    "inquirer": "^8.1.5",
+    "shelljs": "^0.8.4"
   }
 }

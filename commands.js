@@ -1,10 +1,12 @@
+#!/usr/bin/env node
 const { program } = require("commander");
-const {addComponent} = require('./modules/component');
+// const {prompt} = require("inquirer");
+const {addComponent} = require('./src/modules/component');
 
 program.version("1.0.0").description("Custom Cli");
 
 program
-  .command("component <nam>")
+  .command("component <name>")
   .alias("c")
   .description("create component")
   .action((name) => {
