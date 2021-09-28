@@ -1,9 +1,9 @@
 var fs = require("fs");
-const {kebabToPascal} = require('./../../../global/kebab-pascal');
+const {kebabToPascal} = require('../../../global/kebab-pascal');
 
-const createTs = (dir,path, componentName) => {
+const createJs = (dir,path, componentName) => {
   fs.readFile(
-    `${dir}/files/_component.ts`,
+    `${dir}/files/_component.js`,
     "utf8",
     function read(err, data) {
       if (err) {
@@ -13,7 +13,7 @@ const createTs = (dir,path, componentName) => {
       let file = data.replace(/component-name/g, componentName);
       file = file.replace(/ComponentName/g, componentNamePascal);
       fs.writeFile(
-        `./${path}/${componentName}/${componentName}.component.ts`,
+        `./${path}/${componentName}/${componentName}.component.js`,
         file,
         "utf8",
         function (err) {
@@ -27,5 +27,5 @@ const createTs = (dir,path, componentName) => {
 };
 
 module.exports = {
-  createTs,
+  createJs,
 };

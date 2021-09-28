@@ -2,7 +2,7 @@ var fs = require("fs");
 var shell = require("shelljs");
 const { createVue } = require("./functions/create-vue");
 const { createScss } = require("./functions/create-scss");
-const { createTs } = require("./functions/create-ts");
+const { createJs } = require("./functions/create-js");
 
 
 const addComponent = (name) => {
@@ -24,7 +24,7 @@ const addComponent = (name) => {
     const dir = __dirname;
     createVue(dir, path, componentName);
     createScss(dir, path, componentName);
-    createTs(dir, path, componentName);
+    createJs(dir, path, componentName);
   } else {
     console.error("this path already exists");
   }

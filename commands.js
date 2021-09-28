@@ -7,7 +7,7 @@ program.version("1.0.0").description("Custom Cli");
 
 program
   .command("component <name>")
-  .alias("c")
+  .alias("cmp")
   .description("create component")
   .action((name) => {
     addComponent(name);
