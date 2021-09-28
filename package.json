@@ -1,6 +1,6 @@
 {
-  "name": "@samir/yaxsi",
-  "version": "1.0.0",
+  "name": "yaxsi",
+  "version": "1.0.1",
   "description": "custom cli",
   "main": "commands.js",
   "preferGlobal": true,
