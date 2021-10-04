@@ -1,4 +1,4 @@
-# yaxsi
+# yaxshi
 
 Custom CLI
 
@@ -17,7 +17,7 @@ Configuration.
 ## Installation
 
 ```
-npm install -g yaxsi
+npm install -g yaxshi
 ```
 
 ## Options
@@ -47,13 +47,13 @@ Generates new component on given path. Component includes `.vue`, `.js` and `.sc
 For creating component:
 
 ```
-yaxsi component component-name
+yaxshi component component-name
 ```
 
 or
 
 ```
-yaxsi cmp component-name
+yaxshi cmp component-name
 ```
 
 By default, the component is created on `src` folder. Add path in front of project name (`path/page-name/components`) to
@@ -67,13 +67,13 @@ Generates new store on given path. Store includes `state`, `mutations`, `actions
 For creating store:
 
 ```
-yaxsi store component-name
+yaxshi store component-name
 ```
 
 or
 
 ```
-yaxsi str component-name
+yaxshi str component-name
 ```
 
 By default, the store is created on `src` folder. Add path in front of project name (`path/page-name`) to create store
@@ -88,13 +88,13 @@ Generates new models on given path.
 For creating models:
 
 ```
-yaxsi model component-name
+yaxshi model component-name
 ```
 
 or
 
 ```
-yaxsi mdl component-name
+yaxshi mdl component-name
 ```
 
 By default, the model is created on `src` folder. Add path in front of project name (`path/page-name`) to create store
