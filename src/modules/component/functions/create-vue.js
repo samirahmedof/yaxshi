@@ -1,24 +1,16 @@
-var fs = require("fs");
+const fs = require("fs");
+const { vueText } = require("./../files/_vue");
 
-const createVue = (dir,path, componentName) => {
-  fs.readFile(
-    `${dir}/files/_component.vue`,
+const createVue = (path, componentName) => {
+  let file = vueText(componentName);
+  fs.writeFileSync(
+    `./${path}/${componentName}.cmp.vue`,
+    file,
     "utf8",
-    function read(err, data) {
+    function (err) {
       if (err) {
-        console.log(err);
+        console.error(err);
       }
-      let file = data.replace(/component-name/g, componentName);
-      fs.writeFile(
-        `./${path}/${componentName}/${componentName}.component.vue`,
-        file,
-        "utf8",
-        function (err) {
-          if (err) {
-            console.error(err);
-          }
-        }
-      );
     }
   );
 };

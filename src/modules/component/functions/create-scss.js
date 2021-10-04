@@ -1,24 +1,16 @@
-var fs = require("fs");
+const fs = require("fs");
+const { scssText } = require("./../files/_scss");
 
-const createScss = (dir,path, componentName) => {
-  fs.readFile(
-    `${dir}/files/_component.scss`,
+const createScss = (path, componentName) => {
+  let file = scssText(componentName);
+  fs.writeFileSync(
+    `./${path}/${componentName}.cmp.scss`,
+    file,
     "utf8",
-    function read(err, data) {
+    function (err) {
       if (err) {
-        console.log(err);
+        console.error(err);
       }
-      let file = data.replace(/component-name/g, componentName);
-      fs.writeFile(
-        `./${path}/${componentName}/${componentName}.component.scss`,
-        file,
-        "utf8",
-        function (err) {
-          if (err) {
-            console.error(err);
-          }
-        }
-      );
     }
   );
 };

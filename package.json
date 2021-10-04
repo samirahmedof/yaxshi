@@ -1,6 +1,6 @@
 {
   "name": "yaxsi",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "custom cli",
   "main": "commands.js",
   "preferGlobal": true,
