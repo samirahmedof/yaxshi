@@ -4,7 +4,7 @@ const { addComponent } = require("./src/modules/component");
 const { addModel } = require("./src/modules/models");
 const { addStore } = require("./src/modules/store");
 
-program.version("1.0.5").description("Custom Cli");
+program.version("1.0.6").description("Custom Cli");
 
 program
   .command("component <name>")
