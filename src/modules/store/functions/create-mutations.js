@@ -1,8 +1,8 @@
 const fs = require("fs");
 const { mutationsText } = require("../files/_mutations");
 
-const createMutations = (path) => {
-  let file = mutationsText();
+const createMutations = (path,crud) => {
+  let file = mutationsText(crud);
   fs.writeFileSync(`./${path}/mutations.js`, file, "utf8", function (err) {
     if (err) {
       console.error(err);

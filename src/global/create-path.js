@@ -21,7 +21,7 @@ const createPath = (name, type) => {
       componentName,
     };
   } else {
-    console.error("this path already exists");
+    console.error("this path already existsasfasf");
     return false;
   }
 };
