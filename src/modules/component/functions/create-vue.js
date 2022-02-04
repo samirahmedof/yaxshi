@@ -4,7 +4,7 @@ const { vueText } = require("./../files/_vue");
 const createVue = (path, componentName) => {
   let file = vueText(componentName);
   fs.writeFileSync(
-    `./${path}/${componentName}.cmp.vue`,
+    `./${path}/${componentName}.component.vue`,
     file,
     "utf8",
     function (err) {

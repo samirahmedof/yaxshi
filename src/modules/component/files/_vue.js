@@ -1,5 +1,5 @@
 const vueText = (name) => {
-  let result = `<style src="./${name}.cmp.scss" lang="scss"> </style>
+  let result = `<style src="./${name}.component.scss" lang="scss"> </style>
 
 <template>
   <div class="${name}">
@@ -7,7 +7,7 @@ const vueText = (name) => {
   </div>
 </template>
 
-<script src="./${name}.cmp.js"></script>`;
+<script src="./${name}.component.js"></script>`;
   return result;
 };
 

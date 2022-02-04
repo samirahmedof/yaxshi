@@ -4,6 +4,7 @@ const {prompt} = require("inquirer");
 const {addComponent} = require("./src/modules/component");
 const {addModel} = require("./src/modules/models");
 const {addStore} = require("./src/modules/store");
+const {createFullModule} = require("./src/modules/full-module");
 
 const storeCrud = [
     {
@@ -40,7 +41,7 @@ const storeCrud = [
         ],
     },
 ]
-program.version("1.0.7").description("Custom Cli");
+program.version("1.0.9").description("Custom Cli");
 
 
 program
@@ -73,6 +74,14 @@ program
     .option("-p ,--post")
     .action((name, opt) => {
         addModel(name, opt.post);
+    });
+
+program
+    .command("full <name>")
+    .alias("f")
+    .description("create full module")
+    .action((name) => {
+        createFullModule(name);
     });
 
 

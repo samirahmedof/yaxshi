@@ -1,10 +1,7 @@
-const { kebabToPascal } = require("../../../global/kebab-pascal");
-
 const jsText = (name) => {
-  let pascalName = kebabToPascal(name);
 
   let result = `export default {
-name: "${pascalName}",
+name: "${name}",
 };`;
   return result;
 };
